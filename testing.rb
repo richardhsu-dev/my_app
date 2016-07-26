@@ -1,39 +1,34 @@
 require "rubypython"
 
-RubyPython.start
+Dir.chdir "/home/ub03723/Desktop/caffe-home/caffe_mariolew/examples" do
 
-=begin
-cPickle = RubyPython.import("cPickle")
-s = "cPickled String"
-dumped = cPickle.dumps(s)
-loaded = cPickle.loads(dumped)
-puts loaded
-=end
+  RubyPython.start
 
-main = RubyPython.import("__main__")
+  main_ruby = RubyPython.import("__main__")
 
-RubyPython::Python.PyRun_SimpleString <<-PYTHON
+  RubyPython::Python.PyRun_SimpleString <<-PYTHON
 
-import matplotlib
-import numpy as np
 import deconvScript as ds
 
-print np.array([1,2,3])
-
-def my_mult(x, y):
-  return x + y
-
-def new(y):
-  return y+10
-
-def run_ds():
+def test_ds():
   return ds.tester()
 
-PYTHON
+def run_ds():
+  net, t = ds.main('images/cat.jpg', '3_3')
+  net.forward()
+  print 'done forwarding'
+  return str(net.blobs['conv1_1t'].data[0].max())
 
-#puts main.my_mult(10, 20).rubify
-#puts main.new(40).rubify
-puts main.run_ds().rubify
+  PYTHON
+
+  #puts main.my_mult(10, 20).rubify
+  #puts main.new(40).rubify
+  puts main_ruby.test_ds().rubify
+  puts main_ruby.run_ds().rubify
 
 
-RubyPython.stop
+  RubyPython.stop
+
+end ## go back to root directory for this rails app
+
+
