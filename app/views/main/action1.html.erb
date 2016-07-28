@@ -1,4 +1,17 @@
 <h1>Main#action1</h1>
 <p>Find me in app/views/main/action1.html.erb</p>
-<p><%= callScript %></p>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@setup, url: main_run_path) do |f| %>
+        <%= f.label :image %>
+        <%= f.text_field :image %>
+
+        <%= f.label :ending %>
+        <%= f.text_field :ending %>
+
+        <%= f.submit "Run!", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+
 <p>End</p>

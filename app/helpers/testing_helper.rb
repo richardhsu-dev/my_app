@@ -1,4 +1,6 @@
-module Testing
+module TestingHelper
+
+
   require "rubypython"
 
   def runDs(imageFile, ending)
