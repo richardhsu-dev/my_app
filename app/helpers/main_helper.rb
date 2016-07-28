@@ -8,7 +8,12 @@ module MainHelper
     return result
   end
 
-  def callMainScript
-    puts runDs('images/cat.jpg', '3_3')
+  def showInputImage
+    return params[:setup][:image]
   end
+
+  def showInputEnding
+    return params[:setup][:ending]
+  end
+
 end
