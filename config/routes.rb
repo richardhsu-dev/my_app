@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   get '/main', to: 'main#home'
 
+  get '/help', to: 'main#help'
+
   post '/main/run', to: 'main#run'
 
   post '/main', to: 'main#home'

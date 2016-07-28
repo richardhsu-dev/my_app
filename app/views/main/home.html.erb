@@ -1,17 +1,19 @@
-<h1>Home</h1>
-<p>Press run to setup the caffe net with specified image path and ending layer</p>
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <%= form_for(@setup, url: main_run_path) do |f| %>
-        <%= f.label :image %>
-        <%= f.text_field :image %>
+<div class="center jumbotron">
+  <h1>Deconvolute Your Image</h1>
+  <p>Press run to setup the caffe net with specified image path and ending layer</p>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%= form_for(@setup, url: main_run_path) do |f| %>
+          <%= f.label :image %>
+          <%= f.text_field :image %>
 
-        <%= f.label :ending %>
-        <%= f.text_field :ending %>
-
-        <%= f.submit "Run!", class: "btn btn-primary" %>
-    <% end %>
+          <%= f.label :ending %>
+          <%= f.text_field :ending %>
+          <br>
+          <br>
+          <%= f.submit "Run now!", class: "btn btn-lg btn-primary" %>
+      <% end %>
+    </div>
   </div>
 </div>
 
-<p>End</p>

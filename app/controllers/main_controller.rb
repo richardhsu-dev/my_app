@@ -11,4 +11,8 @@ class MainController < ApplicationController
     runDsAlt(params[:setup][:image], params[:setup][:ending])
     #puts runDs(params[:setup][:image], params[:setup][:ending])
   end
+
+  def help
+
+  end
 end
