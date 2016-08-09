@@ -1,8 +1,9 @@
 <h1>Run results:</h1>
 <p>Image: <%= showInputImage %> </p>
 <p>Ending: <%= showInputEnding %> </p>
+<p>Top-K: <%= showInputTopK %> </p>
 
-
-<%= link_to image_tag("vgg_16_web_app_result.png", alt: "result", width: "600", height: "600") %>
-<%= link_to "Back", :back, :class => "navbar-brand" %>
+<%= link_to image_tag("vgg_16_web_app-deconv.jpg", alt: "result", width: "600", height: "600") %>
+<%= link_to image_tag('vgg_16_web_app-labeler.jpg', alt: "labeler", width: "600", height: "600") %>
 <br>
+<%= link_to "Back", :back, :class => "navbar-brand" %>

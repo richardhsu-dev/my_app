@@ -6,10 +6,14 @@ class MainController < ApplicationController
   end
 
   def run
-    puts "params[image]: ", params[:setup][:image]
-    puts "params[ending]: ", params[:setup][:ending]
-    runDsAlt(params[:setup][:image], params[:setup][:ending])
-    #puts runDs(params[:setup][:image], params[:setup][:ending])
+    topk = params[:setup][:topk]
+    if params[:setup][:topk] == ''
+      topk = '-1' # default: all neurons
+    end
+    puts 'params[image]: ', params[:setup][:image]
+    puts 'params[ending]: ', params[:setup][:ending]
+    puts 'params[topk]: ', params[:setup][:topk]
+    runDsAlt(params[:setup][:image], params[:setup][:ending], topk)
   end
 
   def help
