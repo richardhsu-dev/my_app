@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   get '/saliency', to: 'main#saliency'
 
+  get '/compare', to: 'main#compare'
+
   post '/main/run', to: 'main#run'
 
   post '/main', to: 'main#home'
@@ -17,6 +19,10 @@ Rails.application.routes.draw do
   post '/main/saliency_result', to: 'main#saliency_result'
 
   post '/saliency', to: 'main#saliency_result'
+
+  post '/main/compare_result', to: 'main#compare_result'
+
+  post '/compare_result', to: 'main#compare_result'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'main#home'

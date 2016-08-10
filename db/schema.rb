@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160809070659) do
+ActiveRecord::Schema.define(version: 20160810003918) do
+
+  create_table "compares", force: :cascade do |t|
+    t.string   "first"
+    t.string   "second"
+    t.string   "topk"
+    t.string   "layer"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "saliencies", force: :cascade do |t|
     t.string   "image"

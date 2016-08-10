@@ -30,4 +30,14 @@ class MainController < ApplicationController
   def help
 
   end
+
+  def compare
+    @compare = Compare.new
+  end
+
+  def compare_result
+    puts "in compare_result action! "
+    runCompare(params[:compare][:first], params[:compare][:second], params[:compare][:layer], params[:compare][:topk])
+    puts "done in compare_result action! "
+  end
 end
