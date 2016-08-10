@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "bootstrap-sprockets";
 @import "bootstrap";
+$light-gray: #777;
 
 body {
   padding-top: 120px;
@@ -50,4 +51,13 @@ textarea {
   width: 100%;
   margin-top: 45px;
   @include box_sizing;
+}
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: $light-gray;
+  small {
+    float: left;
+  }
 }
