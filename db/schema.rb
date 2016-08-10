@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160810003918) do
+ActiveRecord::Schema.define(version: 20160810014215) do
 
   create_table "compares", force: :cascade do |t|
     t.string   "first"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20160810003918) do
     t.string   "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "category"
   end
 
   create_table "setups", force: :cascade do |t|

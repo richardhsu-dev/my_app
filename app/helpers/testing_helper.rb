@@ -16,9 +16,9 @@ module TestingHelper
     end
   end
 
-  def runSaliency(imageFile)
+  def runSaliency(imageFile, category)
     Dir.chdir '/home/ub03723/Desktop/caffe-home/caffe/examples/imageAnalyzer' do
-      system_command = 'python runSaliency.py ' + '"' + imageFile + '"' + ' 0'
+      system_command = 'python runSaliency.py ' + '"' + imageFile + '" ' + category
       puts system_command
       system(system_command)
     end

@@ -23,7 +23,7 @@ class MainController < ApplicationController
   def saliency_result
     puts "looking for some action for saliency_result!"
     ## call python script
-    runSaliency(params[:saliency][:image])
+    runSaliency(params[:saliency][:image], params[:saliency][:category])
     puts "completed action in sailency_result controller!"
   end
 
