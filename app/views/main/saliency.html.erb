@@ -1,0 +1,17 @@
+<div class="center jumbotron">
+  <h1>Saliency Map</h1>
+  <p>Press run to generate a saliency map analysis for your image</p>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%= form_for(@saliency, url: main_saliency_result_path) do |f| %>
+          <%= f.label :image %>
+          <%= f.text_field :image %>
+
+          <br>
+          <br>
+          <%= f.submit "Run now!", class: "btn btn-lg btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+

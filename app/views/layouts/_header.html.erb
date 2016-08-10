@@ -1,9 +1,10 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
-    <%= link_to "Deconvolution App", root_path, id: "logo" %>
+    <%= link_to "Visualization App", root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home",   root_path %></li>
+        <li><%= link_to "Main",   root_path %></li>
+        <li><%= link_to "Saliency", saliency_path %></li>
         <li><%= link_to "Help",   help_path %></li>
       </ul>
     </nav>

@@ -8,9 +8,15 @@ Rails.application.routes.draw do
 
   get '/help', to: 'main#help'
 
+  get '/saliency', to: 'main#saliency'
+
   post '/main/run', to: 'main#run'
 
   post '/main', to: 'main#home'
+
+  post '/main/saliency_result', to: 'main#saliency_result'
+
+  post '/saliency', to: 'main#saliency_result'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'main#home'

@@ -16,6 +16,17 @@ class MainController < ApplicationController
     runDsAlt(params[:setup][:image], params[:setup][:ending], topk)
   end
 
+  def saliency
+    @saliency = Saliency.new
+  end
+
+  def saliency_result
+    puts "looking for some action for saliency_result!"
+    ## call python script
+    runSaliency(params[:saliency][:image])
+    puts "completed action in sailency_result controller!"
+  end
+
   def help
 
   end

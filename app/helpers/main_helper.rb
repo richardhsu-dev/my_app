@@ -13,4 +13,8 @@ module MainHelper
     return params[:setup][:topk]
   end
 
+  def showInputImageSaliency
+    return params[:saliency][:image]
+  end
+
 end

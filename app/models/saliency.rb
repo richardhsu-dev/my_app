@@ -1,0 +1,2 @@
+class Saliency < ApplicationRecord
+end
